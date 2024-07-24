@@ -1,1 +1,3 @@
-console.log('Hello World!');
+import './js/files'
+import './js/popups/popups'
+
