@@ -3,6 +3,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -12,17 +13,19 @@ const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/[name][ext][query]',
   },
   devServer: {
     open: true,
-    host: 'localhost',
+    host: 'localhost'
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: 'src/index.html', // Убедитесь, что путь к шаблону правильный
     }),
 
     new MiniCssExtractPlugin(),
+    new SpriteLoaderPlugin({ plainSprite: true })
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
@@ -42,12 +45,33 @@ const config = {
         use: [stylesHandler, 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: 'asset',
+        test: /\.(ttf|woff|woff2)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext][query]',
+        },
       },
-
-      // Add your rules for custom modules here
-      // Learn more about loaders from https://webpack.js.org/loaders/
+      {
+        test: /\.(png|jpg|gif|webp)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/images/[name][ext][query]',
+        },
+      },
+      {
+        test: /\.svg$/,
+        include: path.resolve(__dirname, 'src/icons'),
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+            options: {
+              extract: true,
+              spriteFilename: 'sprite.svg',
+              publicPath: '/assets/icons/'
+            }
+          }
+        ]
+      }
     ],
   },
 };

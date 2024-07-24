@@ -1,0 +1,13 @@
+@use "sass:string";
+
+@mixin transition($properties...) {
+    $transitions: '';
+
+    @each $property in $properties {
+        $transitions: $transitions + $property + " 0.5s ease, ";
+    }
+
+    $transitions: string.unquote(string.slice($transitions, 1, -3));
+
+    transition: $transitions;
+}
