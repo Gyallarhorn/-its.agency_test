@@ -1,0 +1,12 @@
+.draggable-list--open {
+    opacity: 1;
+    transform: translateY(0);
+
+    & .filters__options-list {
+        transform: translateY(0);
+    }
+
+    & .sorting__options-list {
+        transform: translateY(0);
+    }
+}

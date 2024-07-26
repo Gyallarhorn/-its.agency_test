@@ -1,3 +1,5 @@
 import './js/files'
-import './js/popups/popups'
+import './js/popups'
+
+import './js/slider'
 

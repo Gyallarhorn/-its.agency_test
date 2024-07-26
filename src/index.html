@@ -66,6 +66,250 @@
             </div>
         </div>
     </header>
+    <main class="main">
+        <section class="navigation">
+            <div class="container">
+                <ul class="navigation__list list-reset">
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Главная</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Продукты</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Краски</a>
+                    </li>
+                </ul>
+                <div class="navigaton__wrapper">
+                    <h1 class="navigation__title">Краски</h1>
+                    <p class="navigation__subtitle">Идеально подходят для стен и&nbsp;других поверхностей. Найди свой
+                        идеальный цвет!</p>
+                </div>
+            </div>
+            <div class="navigation__slider-wrapper">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <picture class="navigation__slider">
+                                <source type="image/webp"
+                                    srcset="./assets/images/slider.webp 1x, ./assets/images/slider@2x.webp 2x">
+                                <img class="navigation__slider-image" src="./assets/images/slider.jpg"
+                                    srcset="./assets/images/slider@2x.jpg 2x"
+                                    alt="Первый элемент - ваза на зеленом фоне" width="760" height="222">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture class="navigation__slider">
+                                <source type="image/webp"
+                                    srcset="./assets/images/slider.webp 1x, ./assets/images/slider@2x.webp 2x">
+                                <img class="navigation__slider-image" src="./assets/images/slider.jpg"
+                                    srcset="./assets/images/slider@2x.jpg 2x"
+                                    alt="Второй элемент - ваза на зеленом фоне" width="760" height="222">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture class="navigation__slider">
+                                <source type="image/webp"
+                                    srcset="./assets/images/slider.webp 1x, ./assets/images/slider@2x.webp 2x">
+                                <img class="navigation__slider-image" src="./assets/images/slider.jpg"
+                                    srcset="./assets/images/slider@2x.jpg 2x"
+                                    alt="Третий элемент - ваза на зеленом фоне" width="760" height="222">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture class="navigation__slider">
+                                <source type="image/webp"
+                                    srcset="./assets/images/slider.webp 1x, ./assets/images/slider@2x.webp 2x">
+                                <img class="navigation__slider-image" src="./assets/images/slider.jpg"
+                                    srcset="./assets/images/slider@2x.jpg 2x"
+                                    alt="Четвертый элемент - ваза на зеленом фоне" width="760" height="222">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture class="navigation__slider">
+                                <source type="image/webp"
+                                    srcset="./assets/images/slider.webp 1x, ./assets/images/slider@2x.webp 2x">
+                                <img class="navigation__slider-image" src="./assets/images/slider.jpg"
+                                    srcset="./assets/images/slider@2x.jpg 2x" alt="Пятый элемент - ваза на зеленом фоне"
+                                    width="760" height="222">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture class="navigation__slider">
+                                <source type="image/webp"
+                                    srcset="./assets/images/slider.webp 1x, ./assets/images/slider@2x.webp 2x">
+                                <img class="navigation__slider-image" src="./assets/images/slider.jpg"
+                                    srcset="./assets/images/slider@2x.jpg 2x"
+                                    alt="Шестой элемент - ваза на зеленом фоне" width="760" height="222">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+            </div>
+        </section>
+        <section class="main-content">
+            <section class="filters">
+                <div class="container">
+                    <button class="button filters__button">Фильтры</button>
+                    <div class="filters__options draggable-parent">
+                        <ul class="filters__options-list draggable-list list-reset">
+                            <li class="filters__options-list-item">
+                                <input class="filters__options-input visually-hidden" type="radio" name="filter"
+                                    id="isNew" value="isNew">
+                                <label class="filters__options-label" for="isNew">Новинки</label>
+                            </li>
+                            <li class="filters__options-list-item">
+                                <input class="filters__options-input visually-hidden" type="radio" name="filter"
+                                    id="isAvailable" value="isAvailable">
+                                <label class="filters__options-label" for="isAvailable">Есть в наличии</label>
+                            </li>
+                            <li class="filters__options-list-item">
+                                <input class="filters__options-input visually-hidden" type="radio" name="filter"
+                                    id="isContractual" value="isContractual">
+                                <label class="filters__options-label" for="isContractual">Контрактные</label>
+                            </li>
+                            <li class="filters__options-list-item">
+                                <input class="filters__options-input visually-hidden" type="radio" name="filter"
+                                    id="isEclusive" value="isEclusive">
+                                <label class="filters__options-label" for="isEclusive">Эксклюзивные</label>
+                            </li>
+                            <li class="filters__options-list-item">
+                                <input class="filters__options-input visually-hidden" type="radio" name="filter"
+                                    id="isSale" value="isSale">
+                                <label class="filters__options-label" for="isSale">Распродажа</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="sorting">
+                <div class="container">
+                    <button class="button sorting__button">Сначала дорогие</button>
+                    <div class="sorting__options draggable-parent">
+                        <ul class="sorting__options-list draggable-list list-reset">
+                            <li class="sorting__options-list-item">
+                                <button class="button sorting__options-list-button">Сначала дорогие</button>
+                            </li>
+                            <li class="sorting__options-list-item">
+                                <button class="button sorting__options-list-button">Сначала недорогие</button>
+                            </li>
+                            <li class="sorting__options-list-item">
+                                <button class="button sorting__options-list-button">Сначала популярные</button>
+                            </li>
+                            <li class="sorting__options-list-item">
+                                <button class="button sorting__options-list-button">Сначала новые</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="products">
+                <div class="container products__container">
+                    <article class="product">
+                        <picture class="product__image-container">
+                            <img class="product__image" src="https://i.postimg.cc/Vkdz0BSm/1.webp"
+                                srcset="https://i.postimg.cc/9QKCdRTT/1-2x.webp 2x" alt="Товар X" width="112"
+                                height="112">
+                        </picture>
+                        <h2 class="product__title">Краска Wallquest, Brownsone MS90102</h2>
+                        <div class="product_bottom">
+                            <span class="product__price">4800 &#8381</span>
+                            <button class="button product__add-item" aria-label="Добавить товар в коризну"></button>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <picture class="product__image-container">
+                            <img class="product__image" src="https://i.postimg.cc/Vkdz0BSm/1.webp"
+                                srcset="https://i.postimg.cc/9QKCdRTT/1-2x.webp 2x" alt="Товар X" width="112"
+                                height="112">
+                        </picture>
+                        <h2 class="product__title">Краска Wallquest, Brownsone MS90102</h2>
+                        <div class="product_bottom">
+                            <span class="product__price">4800 &#8381</span>
+                            <button class="button product__add-item" aria-label="Добавить товар в коризну"></button>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <picture class="product__image-container">
+                            <img class="product__image" src="https://i.postimg.cc/Vkdz0BSm/1.webp"
+                                srcset="https://i.postimg.cc/9QKCdRTT/1-2x.webp 2x" alt="Товар X" width="112"
+                                height="112">
+                        </picture>
+                        <h2 class="product__title">Краска Wallquest, Brownsone MS90102</h2>
+                        <div class="product_bottom">
+                            <span class="product__price">4800 &#8381</span>
+                            <button class="button product__add-item" aria-label="Добавить товар в коризну"></button>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <picture class="product__image-container">
+                            <img class="product__image" src="https://i.postimg.cc/Vkdz0BSm/1.webp"
+                                srcset="https://i.postimg.cc/9QKCdRTT/1-2x.webp 2x" alt="Товар X" width="112"
+                                height="112">
+                        </picture>
+                        <h2 class="product__title">Краска Wallquest, Brownsone MS90102</h2>
+                        <div class="product_bottom">
+                            <span class="product__price">4800 &#8381</span>
+                            <button class="button product__add-item" aria-label="Добавить товар в коризну"></button>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <picture class="product__image-container">
+                            <img class="product__image" src="https://i.postimg.cc/Vkdz0BSm/1.webp"
+                                srcset="https://i.postimg.cc/9QKCdRTT/1-2x.webp 2x" alt="Товар X" width="112"
+                                height="112">
+                        </picture>
+                        <h2 class="product__title">Краска Wallquest, Brownsone MS90102</h2>
+                        <div class="product_bottom">
+                            <span class="product__price">4800 &#8381</span>
+                            <button class="button product__add-item" aria-label="Добавить товар в коризну"></button>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <picture class="product__image-container">
+                            <img class="product__image" src="https://i.postimg.cc/Vkdz0BSm/1.webp"
+                                srcset="https://i.postimg.cc/9QKCdRTT/1-2x.webp 2x" alt="Товар X" width="112"
+                                height="112">
+                        </picture>
+                        <h2 class="product__title">Краска Wallquest, Brownsone MS90102</h2>
+                        <div class="product_bottom">
+                            <span class="product__price">4800 &#8381</span>
+                            <button class="button product__add-item" aria-label="Добавить товар в коризну"></button>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <picture class="product__image-container">
+                            <img class="product__image" src="https://i.postimg.cc/Vkdz0BSm/1.webp"
+                                srcset="https://i.postimg.cc/9QKCdRTT/1-2x.webp 2x" alt="Товар X" width="112"
+                                height="112">
+                        </picture>
+                        <h2 class="product__title">Краска Wallquest, Brownsone MS90102</h2>
+                        <div class="product_bottom">
+                            <span class="product__price">4800 &#8381</span>
+                            <button class="button product__add-item" aria-label="Добавить товар в коризну"></button>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <picture class="product__image-container">
+                            <img class="product__image" src="https://i.postimg.cc/Vkdz0BSm/1.webp"
+                                srcset="https://i.postimg.cc/9QKCdRTT/1-2x.webp 2x" alt="Товар X" width="112"
+                                height="112">
+                        </picture>
+                        <h2 class="product__title">Краска Wallquest, Brownsone MS90102</h2>
+                        <div class="product_bottom">
+                            <span class="product__price">4800 &#8381</span>
+                            <button class="button product__add-item" aria-label="Добавить товар в коризну"></button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </section>
+    </main>
 </body>
 
 </html>
