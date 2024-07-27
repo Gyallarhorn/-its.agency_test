@@ -24,7 +24,7 @@ const handleSwipe = (targetElem, parentElem, deletedClass) => {
     endY = e.touches[0].clientY;
   });
 
-  targetElem.addEventListener('touchend', (e) => {
+  targetElem.addEventListener('touchend', () => {
     const deltaY = endY - startY;
 
     if (deltaY > 30) {

@@ -159,27 +159,27 @@
                     <div class="filters__options draggable-parent">
                         <ul class="filters__options-list draggable-list list-reset">
                             <li class="filters__options-list-item">
-                                <input class="filters__options-input visually-hidden" type="radio" name="filter"
+                                <input class="filters__options-input visually-hidden" type="checkbox" name="filter"
                                     id="isNew" value="isNew">
                                 <label class="filters__options-label" for="isNew">Новинки</label>
                             </li>
                             <li class="filters__options-list-item">
-                                <input class="filters__options-input visually-hidden" type="radio" name="filter"
+                                <input class="filters__options-input visually-hidden" type="checkbox" name="filter"
                                     id="isAvailable" value="isAvailable">
                                 <label class="filters__options-label" for="isAvailable">Есть в наличии</label>
                             </li>
                             <li class="filters__options-list-item">
-                                <input class="filters__options-input visually-hidden" type="radio" name="filter"
+                                <input class="filters__options-input visually-hidden" type="checkbox" name="filter"
                                     id="isContractual" value="isContractual">
                                 <label class="filters__options-label" for="isContractual">Контрактные</label>
                             </li>
                             <li class="filters__options-list-item">
-                                <input class="filters__options-input visually-hidden" type="radio" name="filter"
-                                    id="isEclusive" value="isEclusive">
+                                <input class="filters__options-input visually-hidden" type="checkbox" name="filter"
+                                    id="isEclusive" value="isExclusive">
                                 <label class="filters__options-label" for="isEclusive">Эксклюзивные</label>
                             </li>
                             <li class="filters__options-list-item">
-                                <input class="filters__options-input visually-hidden" type="radio" name="filter"
+                                <input class="filters__options-input visually-hidden" type="checkbox" name="filter"
                                     id="isSale" value="isSale">
                                 <label class="filters__options-label" for="isSale">Распродажа</label>
                             </li>
@@ -189,21 +189,25 @@
             </section>
             <section class="sorting">
                 <div class="container sorting__container">
-                    <span class="sorting__count">412 товаров</span>
+                    <span class="sorting__count"></span>
                     <button class="button sorting__button">Сначала дорогие</button>
                     <div class="sorting__options draggable-parent">
                         <ul class="sorting__options-list draggable-list list-reset">
                             <li class="sorting__options-list-item">
-                                <button class="button sorting__options-list-button">Сначала дорогие</button>
+                                <button class="button sorting__options-list-button" data-sort="price-expensive">Сначала
+                                    дорогие</button>
                             </li>
                             <li class="sorting__options-list-item">
-                                <button class="button sorting__options-list-button">Сначала недорогие</button>
+                                <button class="button sorting__options-list-button" data-sort="price-cheap">Сначала
+                                    недорогие</button>
                             </li>
                             <li class="sorting__options-list-item">
-                                <button class="button sorting__options-list-button">Сначала популярные</button>
+                                <button class="button sorting__options-list-button" data-sort="popular">Сначала
+                                    популярные</button>
                             </li>
                             <li class="sorting__options-list-item">
-                                <button class="button sorting__options-list-button">Сначала новые</button>
+                                <button class="button sorting__options-list-button" data-sort="new">Сначала
+                                    новые</button>
                             </li>
                         </ul>
                     </div>
@@ -211,7 +215,7 @@
             </section>
             <section class="products">
                 <div class="container products__container">
-                    <article class="product product--line">
+                    <!-- <article class="product product--line">
                         <a href="#" class="product__link">
                             <picture class="product__image-container">
                                 <img class="product__image" src="https://i.postimg.cc/Vkdz0BSm/1.webp"
@@ -340,7 +344,7 @@
                                 </svg>
                             </button>
                         </div>
-                    </article>
+                    </article> -->
                 </div>
             </section>
         </section>

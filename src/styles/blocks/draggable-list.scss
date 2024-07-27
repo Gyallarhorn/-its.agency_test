@@ -1,6 +1,7 @@
 .draggable-list--open {
+    pointer-events: all;
     opacity: 1;
-    transform: translateY(0);
+    // transform: translateY(0);
 
     & .filters__options-list {
         transform: translateY(0);

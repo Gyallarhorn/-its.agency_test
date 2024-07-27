@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+// eslint-disable-next-line no-unused-vars
 const swiper = new Swiper('.swiper', {
   modules: [Pagination, Navigation],
   // Optional parameters
