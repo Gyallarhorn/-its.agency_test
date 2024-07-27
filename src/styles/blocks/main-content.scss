@@ -2,5 +2,32 @@
     display: grid;
     grid-template-rows: min-content auto;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 24px;
+    row-gap: 45px;
+}
+
+@media (min-width: 760px) {
+    .main-content {
+        grid-template-columns: 200px 1fr;
+        column-gap: 70px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .main-content {
+        column-gap: 138px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .main-content {
+        grid-template-columns: 240px 1fr;
+        column-gap: 100px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .main-content {
+        grid-template-columns: 230px 1fr;
+        column-gap: 138px;
+    }
 }

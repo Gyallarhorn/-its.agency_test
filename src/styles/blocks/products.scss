@@ -4,4 +4,29 @@
 
 .products__container {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 15px;
+}
+
+@media (min-width: 760px) {
+    .products {
+        grid-column: 2 / -1;
+    }
+
+    .products__container {
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 1100px) {
+    .products__container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 55px 24px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .products__container {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

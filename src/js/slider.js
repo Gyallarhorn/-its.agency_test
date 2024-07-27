@@ -1,4 +1,3 @@
-
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
@@ -6,23 +5,20 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-console.log('hey')
-
-
 const swiper = new Swiper('.swiper', {
-    modules: [Pagination, Navigation],
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
+  modules: [Pagination, Navigation],
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
 
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });

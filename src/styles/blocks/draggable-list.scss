@@ -10,3 +10,13 @@
         transform: translateY(0);
     }
 }
+
+@media (min-width: 760px) {
+    .draggable-list--open {
+        transform: translate(0, 0);
+
+        & .sorting__options-list {
+            transform: translate(0, 0);
+        }
+    }
+}

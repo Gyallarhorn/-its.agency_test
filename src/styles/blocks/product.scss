@@ -1,0 +1,63 @@
+@use '../mixins/mixins' as mixins;
+
+.product {
+    display: flex;
+    flex-direction: column;
+
+    &--line {
+        padding-bottom: 34px;
+        border-bottom: 1px solid var(--primary-border-color);
+    }
+}
+
+.product__image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 41px;
+}
+
+.product__image {
+    object-fit: contain;
+}
+
+.product__title {
+    flex-grow: 1;
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 112%;
+    letter-spacing: 0.02em;
+}
+
+.product_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product__price {
+    font-weight: 600;
+}
+
+.product__add-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 24px;
+    background-color: var(--input-background-color);
+    border-radius: 8px;
+    @include mixins.transition(background-color);
+
+    &:hover {
+        background-color: var(--secondary-background-color);
+    }
+}
+
+@media (min-width: 1100px) {
+    .product__image {
+        width: 200px;
+        height: 200px;
+    }
+}
