@@ -2,17 +2,31 @@ import axios from 'axios';
 import debounce from '../utils/debounce';
 
 class Products {
-  constructor(sorter, filter, config, parentElement, countContainer) {
+  constructor(
+    sorter,
+    filter,
+    cart,
+    config,
+    parentElement,
+    productClass,
+    buttonClass,
+    countContainer,
+  ) {
     this.config = config;
     this.products = [];
     this.cache = [];
     this.filter = filter;
+    this.cart = cart;
     this.sorter = sorter;
+    this.buttonClass = buttonClass;
+    this.productClass = productClass;
     this.count = document.querySelector(countContainer);
     this.parentElement = document.querySelector(parentElement);
     this.handleResize = debounce(this.handleResize.bind(this), 500);
 
     window.addEventListener('resize', this.handleResize);
+
+    this.parentElement.addEventListener('click', (e) => this.handleContainerClick(e));
   }
 
   static configureProduct(id, product) {
@@ -50,7 +64,7 @@ class Products {
     const cardInnerContent = `<a href="#" class="product__link">
             <picture picture picture class="product__image-container">
                 <img class="product__image" src=${product.image[0]}
-                    srcset="${product.image[1]} 2x" alt="${product.name} ${product.isAvailable ? 'в наличии' : 'отсутствует в продаже'}" width="112"
+                    srcset="${product.image[1]} 2x" alt="${product.isAvailable ? 'в наличии' : 'отсутствует в продаже'}" width="112"
                     height="112">
             </picture>
         </a>
@@ -66,6 +80,28 @@ class Products {
 
     card.innerHTML = cardInnerContent;
     return card;
+  }
+
+  handleContainerClick(e) {
+    if (!e.target.closest(this.buttonClass)) return;
+
+    const { id } = e.target.closest(this.productClass).dataset;
+
+    this.cart.addItem(id, this.addToCard(id));
+    this.cart.updateUI();
+  }
+
+  addToCard(id) {
+    const filteredProduct = this.cache.find((product) => product.id === id);
+
+    return {
+      id,
+      isAvailable: filteredProduct.isAvailable,
+      price: filteredProduct.price,
+      name: filteredProduct.name,
+      image: filteredProduct.image,
+      count: 0,
+    };
   }
 
   addCards() {

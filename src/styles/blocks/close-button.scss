@@ -28,4 +28,9 @@
     &:focus-visible {
         opacity: 0.6;
     }
+
+    &--cart {
+        border: none;
+        opacity: 0.2;
+    }
 }

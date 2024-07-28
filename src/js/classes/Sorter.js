@@ -3,7 +3,6 @@ class Sorter {
     this.parentElement = document.querySelector(parentElement);
     this.button = document.querySelector(button);
     this.removingClass = removingClass;
-    // this.items = products;
     this.sortOption = '';
   }
 

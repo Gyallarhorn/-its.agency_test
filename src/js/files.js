@@ -3,6 +3,7 @@ import '../icons/logo.svg';
 import '../icons/profile.svg';
 import '../icons/search.svg';
 import '../icons/plus.svg';
+import '../icons/repeat.svg';
 
 import '../styles/style.scss';
 import '../icons/slider.jpg';
