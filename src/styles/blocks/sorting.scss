@@ -1,0 +1,126 @@
+@use '../mixins/mixins' as mixins;
+
+.sorting {
+    justify-self: end;
+
+    & .container {
+        padding-left: 0;
+        margin: 0;
+    }
+}
+
+.sorting__button {
+    position: relative;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+
+    &::after {
+        content: '';
+        border: 4px solid transparent;
+        border-top-color: var(--tertiary-text-color);
+    }
+
+    &:hover::after {
+        animation: moveDown 750ms ease;
+    }
+}
+
+.sorting__count {
+    display: none;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.sorting__options {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    background-color: var(--popup-background-color);
+    opacity: 0;
+    @include mixins.transition(opacity)
+}
+
+.sorting__options-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 51px 0 114px 0;
+    margin-top: auto;
+    background-color: var(--primary-background-color);
+    border-radius: 24px 24px 0 0;
+    transform: translateY(50px);
+    @include mixins.transition(transform);
+
+    &::before {
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        width: 28px;
+        height: 4px;
+        content: '';
+        background-color: var(--primary-text-color);
+        border-radius: 40px;
+        opacity: 0.6;
+        transform: translateX(-50%);
+    }
+}
+
+.sorting__options-list-button {
+    display: block;
+    width: 100%;
+    padding: 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    @include mixins.transition(background-color);
+
+    &:hover {
+        background-color: var(--secondary-background-color);
+    }
+}
+
+@media (min-width: 760px) {
+    .sorting {
+        justify-self: auto;
+    }
+
+    .sorting__count {
+        display: block;
+    }
+
+    .sorting__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sorting__options-list {
+        position: absolute;
+        top: 44vh;
+        right: 64px;
+        min-width: 280px;
+        padding: 0;
+        margin-top: 0;
+        border-radius: 0;
+        transform: translateX(20px);
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .sorting__options-list-button {
+        padding: 18px 24px;
+        text-align: left;
+    }
+}

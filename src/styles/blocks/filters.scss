@@ -1,0 +1,143 @@
+@use '../mixins/mixins' as mixins;
+
+.filters {
+    & .container {
+        padding-right: 0;
+        margin: 0;
+    }
+}
+
+.filters__button {
+    display: flex;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    @include mixins.transition(opacity);
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.filters__options {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    background-color: var(--popup-background-color);
+    opacity: 0;
+    @include mixins.transition(opacity)
+}
+
+.filters__options-list {
+    position: relative;
+    padding: 51px 24px 114px 24px;
+    margin-top: auto;
+    background-color: var(--primary-background-color);
+    border-radius: 24px 24px 0 0;
+    transform: translateY(50px);
+    @include mixins.transition(transform);
+
+    &::before {
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        width: 28px;
+        height: 4px;
+        content: '';
+        background-color: var(--primary-text-color);
+        border-radius: 40px;
+        opacity: 0.6;
+        transform: translateX(-50%);
+    }
+}
+
+.filters__options-list-item {
+    padding: 5px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.filters__options-label {
+    position: relative;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    cursor: pointer;
+
+    &::before {
+        flex-shrink: 0;
+        width: 36px;
+        height: 22px;
+        content: '';
+        background-color: var(--input-background-color);
+        border-radius: 40px;
+        @include mixins.transition(background-color);
+    }
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 7px;
+        width: 8px;
+        height: 8px;
+        content: '';
+        background-color: var(--primary-text-color);
+        border-radius: 50%;
+        transform: translateY(-50%);
+        @include mixins.transition(transform)
+    }
+}
+
+.filters__options-input {
+    &:focus-visible+.filters__options-label {
+        outline: 1px solid var(--primary-text-color);
+    }
+
+    &:checked+.filters__options-label {
+        &::before {
+            background-color: var(--secondary-background-color);
+        }
+
+        &::after {
+            transform: translate(14px, -50%);
+        }
+    }
+}
+
+@media (min-width: 760px) {
+    .filters {
+        grid-row: 1 / -1;
+    }
+
+    .filters__button {
+        display: none;
+    }
+
+    .filters__options {
+        position: static;
+        width: auto;
+        height: auto;
+        pointer-events: all;
+        background-color: transparent;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .filters__options-list {
+        padding: 0;
+        margin-top: 0;
+        background-color: transparent;
+        border: none;
+        transform: translateY(0);
+
+        &::before {
+            display: none;
+        }
+    }
+}

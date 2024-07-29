@@ -4,7 +4,21 @@
 
 @use './blocks/page';
 @use './blocks/container';
+@use './blocks/visually-hidden';
 @use './blocks/list-reset';
+@use './blocks/animation';
 @use './blocks/button';
 @use './blocks/header';
 @use './blocks/close-button';
+@use './blocks/navigation';
+@use './blocks/swiper';
+@use './blocks/filters';
+@use './blocks/sorting';
+@use './blocks/main-content';
+@use './blocks/draggable-list';
+@use './blocks/products';
+@use './blocks/product';
+@use './blocks/cart';
+@use './blocks/cart-table';
+@use './blocks/not-available';
+@use './blocks/footer';

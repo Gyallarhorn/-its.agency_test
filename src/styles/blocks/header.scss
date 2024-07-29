@@ -1,10 +1,32 @@
 @use '../mixins/mixins' as mixins;
 
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    background-color: var(--primary-background-color);
+}
+
 .header__wrapper {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 24px;
+
+    &::after {
+        position: absolute;
+        bottom: 0;
+        left: 24px;
+        width: calc(100% - 48px);
+        height: 1px;
+        padding: 0 24px;
+        content: '';
+        background-color: var(--primary-text-color);
+        opacity: 0.06;
+    }
 }
 
 .header__burger-line {
@@ -12,7 +34,7 @@
     width: 100%;
     height: 2px;
     background-color: var(--primary-text-color);
-    @include mixins.transition(transform, opacity);
+    @include mixins.transition(transform);
 }
 
 .header__burger {
@@ -40,7 +62,7 @@
     }
 
     .header__burger-line:nth-of-type(3) {
-        opacity: 0;
+        transform: scaleX(0)
     }
 }
 
@@ -112,6 +134,8 @@
 
 .header__menu-link {
     position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 
     &::after {
         position: absolute;
@@ -137,7 +161,11 @@
         gap: 20px;
         align-items: center;
         justify-content: space-between;
-        padding: 40px 24px;
+        padding: 38px 24px;
+
+        &::after {
+            display: none;
+        }
     }
 
     .header__burger,
@@ -158,7 +186,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 24px;
+        gap: 15px;
         align-items: center;
         justify-content: flex-start;
         height: auto;
@@ -176,6 +204,17 @@
         display: grid;
         grid-template-columns: min-content 1fr auto min-content;
         gap: 116px;
+    }
+
+    .header__menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px 25px;
+        align-items: center;
+        justify-content: flex-start;
+        height: auto;
+        font-size: 14px;
     }
 
     .header__contacts {

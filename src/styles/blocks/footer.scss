@@ -1,0 +1,10 @@
+.footer {
+    min-height: 205px;
+    background-color: var(--icon-color);
+}
+
+@media (min-width: 760px) {
+    .footer {
+        min-height: 312px;
+    }
+}

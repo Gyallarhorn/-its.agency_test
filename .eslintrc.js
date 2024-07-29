@@ -22,6 +22,6 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'linebreak-style': 'windows',
+    'linebreak-style': 0,
   },
 };

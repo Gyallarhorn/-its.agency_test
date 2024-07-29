@@ -1,18 +1,42 @@
 .page {
     height: 100%;
+    scrollbar-gutter: stable;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--secondary-background-color);
+        border: 2px solid transparent;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: var(--primary-background-color);
+        border: 2px solid transparent;
+    }
 }
 
 .page-body {
     display: grid;
-    grid-template-rows: min-content 1fr min-content;
+    grid-template-rows: 1fr min-content;
     min-width: 375px;
-    padding: 0;
+    padding: 64px 0 0 0;
     margin: 0;
     overflow-x: hidden;
     font-family: 'Inter', Arial, sans-serif;
     font-size: 16px;
     font-weight: normal;
-    line-height: 1;
+    line-height: 100%;
     color: var(--primary-text-color);
     background-color: var(--primary-background-color);
+
+}
+
+@media (min-width: 760px) {
+    .page-body {
+        padding: 104px 0 0 0;
+    }
 }

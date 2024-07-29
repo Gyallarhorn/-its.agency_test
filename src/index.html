@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="its.agency тестовое задание">
+    <meta name="keywords" content="its.agency, тестовое задание, frontend, ">
     <title>Colors catalog page</title>
 </head>
 
@@ -66,6 +68,181 @@
             </div>
         </div>
     </header>
+    <main class="main">
+        <div class="navigation">
+            <div class="container">
+                <ul class="navigation__list list-reset">
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Главная</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Продукты</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Краски</a>
+                    </li>
+                </ul>
+                <div class="navigaton__wrapper">
+                    <h1 class="navigation__title">Краски</h1>
+                    <p class="navigation__subtitle">Идеально подходят для стен и&nbsp;других поверхностей. Найди свой
+                        идеальный цвет!</p>
+                </div>
+            </div>
+            <div class="navigation__slider-wrapper">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <picture class="navigation__slider">
+                                <source type="image/webp"
+                                    srcset="./assets/images/slider.webp 1x, ./assets/images/slider@2x.webp 2x">
+                                <img loading="lazy" class="navigation__slider-image" src="./assets/images/slider.jpg"
+                                    srcset="./assets/images/slider@2x.jpg 2x"
+                                    alt="Первый элемент - ваза на зеленом фоне" width="760" height="222">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture class="navigation__slider">
+                                <source type="image/webp"
+                                    srcset="./assets/images/slider.webp 1x, ./assets/images/slider@2x.webp 2x">
+                                <img loading="lazy" class="navigation__slider-image" src="./assets/images/slider.jpg"
+                                    srcset="./assets/images/slider@2x.jpg 2x"
+                                    alt="Второй элемент - ваза на зеленом фоне" width="760" height="222">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture class="navigation__slider">
+                                <source type="image/webp"
+                                    srcset="./assets/images/slider.webp 1x, ./assets/images/slider@2x.webp 2x">
+                                <img loading="lazy" class="navigation__slider-image" src="./assets/images/slider.jpg"
+                                    srcset="./assets/images/slider@2x.jpg 2x"
+                                    alt="Третий элемент - ваза на зеленом фоне" width="760" height="222">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture class="navigation__slider">
+                                <source type="image/webp"
+                                    srcset="./assets/images/slider.webp 1x, ./assets/images/slider@2x.webp 2x">
+                                <img loading="lazy" class="navigation__slider-image" src="./assets/images/slider.jpg"
+                                    srcset="./assets/images/slider@2x.jpg 2x"
+                                    alt="Четвертый элемент - ваза на зеленом фоне" width="760" height="222">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture class="navigation__slider">
+                                <source type="image/webp"
+                                    srcset="./assets/images/slider.webp 1x, ./assets/images/slider@2x.webp 2x">
+                                <img loading="lazy" class="navigation__slider-image" src="./assets/images/slider.jpg"
+                                    srcset="./assets/images/slider@2x.jpg 2x" alt="Пятый элемент - ваза на зеленом фоне"
+                                    width="760" height="222">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture class="navigation__slider">
+                                <source type="image/webp"
+                                    srcset="./assets/images/slider.webp 1x, ./assets/images/slider@2x.webp 2x">
+                                <img loading="lazy" class="navigation__slider-image" src="./assets/images/slider.jpg"
+                                    srcset="./assets/images/slider@2x.jpg 2x"
+                                    alt="Шестой элемент - ваза на зеленом фоне" width="760" height="222">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="filters">
+                <div class="container">
+                    <button class="button filters__button">Фильтры</button>
+                    <div class="filters__options draggable-parent">
+                        <ul class="filters__options-list draggable-list list-reset">
+                            <li class="filters__options-list-item">
+                                <input class="filters__options-input visually-hidden" type="checkbox" name="filter"
+                                    id="isNew" value="isNew">
+                                <label class="filters__options-label" for="isNew">Новинки</label>
+                            </li>
+                            <li class="filters__options-list-item">
+                                <input class="filters__options-input visually-hidden" type="checkbox" name="filter"
+                                    id="isAvailable" value="isAvailable">
+                                <label class="filters__options-label" for="isAvailable">Есть в наличии</label>
+                            </li>
+                            <li class="filters__options-list-item">
+                                <input class="filters__options-input visually-hidden" type="checkbox" name="filter"
+                                    id="isContractual" value="isContractual">
+                                <label class="filters__options-label" for="isContractual">Контрактные</label>
+                            </li>
+                            <li class="filters__options-list-item">
+                                <input class="filters__options-input visually-hidden" type="checkbox" name="filter"
+                                    id="isEclusive" value="isExclusive">
+                                <label class="filters__options-label" for="isEclusive">Эксклюзивные</label>
+                            </li>
+                            <li class="filters__options-list-item">
+                                <input class="filters__options-input visually-hidden" type="checkbox" name="filter"
+                                    id="isSale" value="isSale">
+                                <label class="filters__options-label" for="isSale">Распродажа</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sorting">
+                <div class="container sorting__container">
+                    <span class="sorting__count"></span>
+                    <button class="button sorting__button">Сначала дорогие</button>
+                    <div class="sorting__options draggable-parent">
+                        <ul class="sorting__options-list draggable-list list-reset">
+                            <li class="sorting__options-list-item">
+                                <button class="button sorting__options-list-button" data-sort="price-expensive">Сначала
+                                    дорогие</button>
+                            </li>
+                            <li class="sorting__options-list-item">
+                                <button class="button sorting__options-list-button" data-sort="price-cheap">Сначала
+                                    недорогие</button>
+                            </li>
+                            <li class="sorting__options-list-item">
+                                <button class="button sorting__options-list-button" data-sort="popular">Сначала
+                                    популярные</button>
+                            </li>
+                            <li class="sorting__options-list-item">
+                                <button class="button sorting__options-list-button" data-sort="new">Сначала
+                                    новые</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <div class="container products__container">
+                </div>
+            </div>
+            <section class="cart">
+                <div class="container cart__container">
+                    <div class="cart__top">
+                        <h2 class="cart__title">Корзина</h2>
+                        <button class="button close-button" aria-label="Закрыть корзину"></button>
+                    </div>
+                    <div class="cart__top-table">
+                        <span class="cart__count">4 товара</span>
+                        <button class="button cart__clear-button">очистить список</button>
+                    </div>
+                    <table class="cart-table">
+                    </table>
+                    <div class="cart__bottom">
+                        <div class="cart__bottom-left">
+                            <span class="cart__bottom-text">Итого</span>
+                            <h3 class="cart__price-title"></h3>
+                        </div>
+                        <button class="cart__bottom-right button">Оформить заказ</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer"></footer>
 </body>
 
 </html>
