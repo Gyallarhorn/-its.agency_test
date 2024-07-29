@@ -16,7 +16,6 @@
 .navigation__list-item {
     position: relative;
 
-
     &:not(:last-child)::after {
         position: absolute;
         top: 50%;
@@ -61,7 +60,7 @@
     .navigation {
         min-height: 400px;
         padding-top: 32px;
-        margin-bottom: 56px;
+        margin-bottom: 73px;
         background-color: var(--image-background-color);
     }
 
@@ -69,7 +68,7 @@
         position: absolute;
         top: 120px;
         left: 50%;
-        z-index: 10;
+        z-index: 4;
         display: block;
         max-width: 472px;
         transform: translateX(-50%);
@@ -96,7 +95,7 @@
 
     .navigation__list {
         position: relative;
-        z-index: 10;
+        z-index: 4;
     }
 
     .navigation__list-link {

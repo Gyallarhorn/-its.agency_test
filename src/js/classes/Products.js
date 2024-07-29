@@ -6,13 +6,15 @@ class Products {
     sorter,
     filter,
     cart,
-    config,
-    parentElement,
-    productClass,
-    buttonClass,
-    countContainer,
+    {
+      cardClasses,
+      parentElement,
+      productClass,
+      buttonClass,
+      countContainer,
+    },
   ) {
-    this.config = config;
+    this.cardClasses = cardClasses;
     this.products = [];
     this.cache = [];
     this.filter = filter;
@@ -54,7 +56,7 @@ class Products {
 
   createCard(product, isNotLast) {
     const card = document.createElement('article');
-    card.classList.add(...this.config.cardClasses);
+    card.classList.add(...this.cardClasses);
     card.setAttribute('data-id', product.id);
 
     if (isNotLast) {
@@ -62,11 +64,12 @@ class Products {
     }
 
     const cardInnerContent = `<a href="#" class="product__link">
-            <picture picture picture class="product__image-container">
-                <img class="product__image" src=${product.image[0]}
-                    srcset="${product.image[1]} 2x" alt="${product.isAvailable ? 'в наличии' : 'отсутствует в продаже'}" width="112"
-                    height="112">
-            </picture>
+            <picture class="product__image-container">
+              <source type="image/webp" srcset="${product.image[0]} 1x,${product.image[2]} 2x">
+                  <img loading="lazy" class="product__image" src=${product.image[1]}
+                      srcset="${product.image[3]} 2x" alt="${product.isAvailable ? 'в наличии' : 'отсутствует в продаже'}" width="112"
+                      height="112">
+              </picture>
         </a>
         <h2 class="product__title">${product.name}</h2>
         <div class="product_bottom">
@@ -112,7 +115,7 @@ class Products {
     const count = this.products.length;
 
     let cardsPerRow;
-    if (window.innerWidth >= 1920) {
+    if (window.innerWidth >= 1500) {
       cardsPerRow = 5;
     } else if (window.innerWidth >= 1400) {
       cardsPerRow = 4;

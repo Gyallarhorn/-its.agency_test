@@ -6,7 +6,7 @@ import '../icons/plus.svg';
 import '../icons/repeat.svg';
 
 import '../styles/style.scss';
-import '../icons/slider.jpg';
-import '../icons/slider.webp';
-import '../icons/slider@2x.jpg';
-import '../icons/slider@2x.webp';
+import '../images/slider.jpg';
+import '../images/slider.webp';
+import '../images/slider@2x.jpg';
+import '../images/slider@2x.webp';

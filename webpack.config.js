@@ -1,5 +1,3 @@
-// Generated using webpack-cli https://github.com/webpack/webpack-cli
-
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -17,18 +15,16 @@ const config = {
   },
   devServer: {
     open: true,
-    host: 'localhost'
+    host: 'localhost',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/index.html', // Убедитесь, что путь к шаблону правильный
+      template: 'src/index.html',
     }),
 
     new MiniCssExtractPlugin(),
-    new SpriteLoaderPlugin({ plainSprite: true })
+    new SpriteLoaderPlugin({ plainSprite: true }),
 
-    // Add your plugins here
-    // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
   module: {
     rules: [
@@ -67,11 +63,11 @@ const config = {
             options: {
               extract: true,
               spriteFilename: 'sprite.svg',
-              publicPath: '/assets/icons/'
-            }
-          }
-        ]
-      }
+              publicPath: '/assets/icons/',
+            },
+          },
+        ],
+      },
     ],
   },
 };

@@ -1,5 +1,5 @@
 class Sorter {
-  constructor(parentElement, removingClass, button) {
+  constructor({ parentElement, removingClass, button }) {
     this.parentElement = document.querySelector(parentElement);
     this.button = document.querySelector(button);
     this.removingClass = removingClass;

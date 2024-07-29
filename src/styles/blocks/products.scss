@@ -5,7 +5,7 @@
 .products__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px 15px;
+    gap: 40px 15px;
     padding-bottom: 64px;
 }
 
@@ -34,8 +34,9 @@
     }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1500px) {
     .products__container {
         grid-template-columns: repeat(5, 1fr);
+        row-gap: 58px;
     }
 }

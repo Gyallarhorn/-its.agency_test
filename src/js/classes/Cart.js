@@ -1,5 +1,7 @@
 class Cart {
-  constructor(openButton, closeButton, cartContainer, tablePlace, cartCount, price, changeButton, clearButton) {
+  constructor({
+    openButton, closeButton, cartContainer, tablePlace, cartCount, price, changeButton, clearButton,
+  }) {
     this.items = Cart.setItems();
     this.openButton = document.querySelector(openButton);
     this.closeButton = document.querySelector(closeButton);
@@ -96,8 +98,8 @@ class Cart {
   handleChange() {
     this.tablePlace.addEventListener('click', (e) => {
       if (!e.target.classList.contains(this.changeButton)
-                && !e.target.classList.contains('close-button')
-                && !e.target.closest('.cart-table__replace-button')
+        && !e.target.classList.contains('close-button')
+        && !e.target.closest('.cart-table__replace-button')
       ) return;
 
       const parentId = e.target.closest('.cart-table__row').dataset.id;
@@ -158,9 +160,10 @@ class Cart {
     return `<tr class="${item.isAvailable ? 'cart-table__row' : 'cart-table__row not-available'}" data-id=${item.id}>
                     <td class="cart-table__data">
                          <picture class="cart-table__image-container">
-                            <img class="cart-table__image" src=${item.image[0]}
-                                srcset="${item.image[1]} 2x" alt="${item.isAvailable ? 'в наличии' : 'отсутствует в продаже'}" width="96"
-                                height="96">
+                          <source type="image/webp" srcset="${item.image[0]} 1x,${item.image[2]} 2x">
+                              <img loading="lazy" class="cart-table__image" src=${item.image[1]}
+                                  srcset="${item.image[3]} 2x" alt="${item.isAvailable ? 'в наличии' : 'отсутствует в продаже'}" width="96"
+                                  height="96">
                         </picture>
                     </td>
                     <td class="cart-table__data">
@@ -169,10 +172,10 @@ class Cart {
                     </td>
                     <td class="cart-table__data">
                         <div class="cart-table__wrapper">
-                            <button class="button cart-table__change-button"
+                            <button class="button cart-table__change-button" ${item.isAvailable ? '' : 'disabled'}
                                 aria-label="Убрать 1 позицию товара"></button>
                             <span class="cart-table__count">${item.count}</span>
-                            <button class="button cart-table__change-button cart-table__change-button--plus"
+                            <button class="button cart-table__change-button cart-table__change-button--plus" ${item.isAvailable ? '' : 'disabled'}
                                 aria-label="Добавить 1 позицию товара"></button>
                         </div>
                     </td>

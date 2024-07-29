@@ -1,5 +1,5 @@
 class Filter {
-  constructor(parentElement, removingClass) {
+  constructor({ parentElement, removingClass }) {
     this.parentElement = document.querySelector(parentElement);
     this.removingClass = removingClass;
     this.filters = {};

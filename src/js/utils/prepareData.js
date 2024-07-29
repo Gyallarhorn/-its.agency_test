@@ -8,7 +8,7 @@ const createProduct = () => ({
   name: `Краска Wallquest, Brownsone MS${generateRandomString(5)}`,
   price: prices[random(0, prices.length - 1)],
   createdAt: new Date(),
-  image: images.get(random(0, images.size)),
+  image: images.get(random(1, images.size)),
   isSale: Boolean(random()),
   isEclusive: Boolean(random()),
   isAvailable: Boolean(random()),
