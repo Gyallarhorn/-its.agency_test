@@ -1,6 +1,6 @@
 # Тестовое задание для компании its.agency
 
-- Live Site URL: [Colors catalog page](http://Gyallarhorn.github.io/frontend-mentor__dictionary-app)
+- Live Site URL: [Colors catalog page](https://gyallarhorn.github.io/-its.agency_test/)
 
 ## Overview
 
